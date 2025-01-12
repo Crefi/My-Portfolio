@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AlexLV Portfolio</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <div class="navbar">
+    <div class="navbar__logo">
+      <a href="#">AlexLV Portfolio</a>
+    </div>
+    <div class="navbar__links">
+      <a href="#skills" class="navbar__link">Skills</a>
+      <a href="#projects" class="navbar__link">Projects</a>
+      <a href="#contact" class="navbar__link">Contact</a>
+    </div>
+    <div class="navbar__theme-dropdown">
+      <button id="theme-button" class="navbar__theme-button">Switch Theme</button>
+      <ul id="theme-menu" class="navbar__theme-menu">
+        <li class="navbar__theme-option" data-theme="theme-light">Light Theme</li>
+        <li class="navbar__theme-option" data-theme="theme-dark">Dark Theme</li>
+        <li class="navbar__theme-option" data-theme="theme-blue">Blue Theme</li>
+        <li class="navbar__theme-option" data-theme="theme-pink">Pink Theme</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Hero Section -->
+  <section id="hero" class="hero">
+    <div class="hero__content">
+      <h1 class="hero__title">Hi, I'm AlexLV</h1>
+      <p class="hero__subtitle">Azure Devops Engineer </p>
+      <div class="hero__buttons">
+        <a href="CV.pdf" class="button button--primary" download>Download CV</a>
+        <a href="#contact" class="button button--secondary">Contact Me</a>
+      </div>
+    </div>
+    <div class="hero__image">
+      <img src="images/pfp.jpg" alt="AlexLV Profile Picture">
+    </div>
+  </section>
+
+<!-- About Me Section -->
+<section id="about" class="about">
+  <h2 class="about__title">About Me</h2>
+  <p class="about__description">
+    I'm a dedicated Azure DevOps Engineer with a passion for designing scalable infrastructures, automating workflows, and optimizing cloud solutions. 
+    I thrive on solving complex challenges, staying ahead of evolving technologies, and delivering secure, high-performance systems that drive business success.
+  </p>
+  <div class="about__interests">
+    <div class="about__interest">
+      <i class="about__icon fas fa-cloud"></i>
+      <p class="about__text">Cloud Architecture</p>
+    </div>
+    <div class="about__interest">
+      <i class="about__icon fas fa-tools"></i>
+      <p class="about__text">DevOps Automation</p>
+    </div>
+    <div class="about__interest">
+      <i class="about__icon fas fa-code"></i>
+      <p class="about__text">Infrastructure as Code (IaC)</p>
+    </div>
+    <div class="about__interest">
+      <i class="about__icon fas fa-lock"></i>
+      <p class="about__text">Cloud Security</p>
+    </div>
+  </div>
+</section>
+
+<!-- Skills Section -->
+<section id="skills" class="skills">
+  <h2 class="skills__title">Skills & Certifications</h2>
+  <div class="skills__grid">
+    <!-- Skill: Cloud Platforms -->
+    <div class="skills__item">
+      <i class="skills__icon fas fa-cloud"></i>
+      <h3 class="skills__name">Cloud Platforms</h3>
+      <p class="skills__description">Azure, AWS</p>
+    </div>
+    <!-- Skill: DevOps & Automation -->
+    <div class="skills__item">
+      <i class="skills__icon fas fa-cogs"></i>
+      <h3 class="skills__name">DevOps & Automation</h3>
+      <p class="skills__description">CI/CD, Azure DevOps, Jenkins, GitHub Actions</p>
+    </div>
+    <!-- Skill: Infrastructure as Code -->
+    <div class="skills__item">
+      <i class="skills__icon fas fa-code"></i>
+      <h3 class="skills__name">Infrastructure as Code</h3>
+      <p class="skills__description">Terraform, ARM Templates, Ansible</p>
+    </div>
+    <!-- Skill: Programming -->
+    <div class="skills__item">
+      <i class="skills__icon fas fa-terminal"></i>
+      <h3 class="skills__name">Programming</h3>
+      <p class="skills__description">Python, Go,Js, Bash, PowerShell</p>
+    </div>
+    <!-- Skill: Containerization -->
+    <div class="skills__item">
+      <i class="skills__icon fas fa-network-wired"></i>
+      <h3 class="skills__name">Containerization</h3>
+      <p class="skills__description">Docker, Kubernetes</p>
+    </div>
+  <!-- Certifications -->
+    <div class="skills__item">
+      <a href="https://learn.microsoft.com/api/credentials/share/en-us/AlexandruLivadariu-0781/161D2ACBE096EA91?sharingId=7A2B7052DAFF452D" target="_blank" class="skills__cert-link">
+        <img src="images/az-900.svg" alt="Azure Icon" class="skills__cert-icon">
+        Azure Fundamentals (AZ-900)
+      </a>
+    </div>
+    <div class="skills__item">
+      <a href="https://learn.microsoft.com/api/credentials/share/en-us/AlexandruLivadariu-0781/DF76B9B4A9BCC66B?sharingId=7A2B7052DAFF452D" target="_blank" class="skills__cert-link">
+        <img src="images/az-104.svg" alt="Azure Icon" class="skills__cert-icon">
+        Azure Administrator (AZ-104)
+      </a>
+    </div>
+    <div class="skills__item">
+      <a href="https://learn.microsoft.com/api/credentials/share/en-us/AlexandruLivadariu-0781/4D7C76C97BD4965B?sharingId=7A2B7052DAFF452D" target="_blank" class="skills__cert-link">
+        <img src="images/az-204.svg" alt="Azure Icon" class="skills__cert-icon">
+        Azure Developer (AZ-204)
+      </a>
+    </div>
+    <div class="skills__item">
+      <a href="https://www.credly.com/badges/647de39e-7a2f-4808-8be2-923381ddd3da/public_url" target="_blank" class="skills__cert-link">
+        <img src="images/google-associate.png" alt="Google Cloud Icon" class="skills__cert-icon">
+        Google Associate Cloud Engineer
+      </a>
+    </div>
+    <div class="skills__item">
+      <a href="https://www.credly.com/badges/647de39e-7a2f-4808-8be2-923381ddd3da/public_url" target="_blank" class="skills__cert-link">
+        <img src="images/CCNA.png" alt="Cisco Icon" class="skills__cert-icon">
+        CCNA (Cisco Certified Network Associate)
+      </a>
+
+
+  </div>
+</section>
+
+
+  <!-- Projects Section -->
+  <section id="projects" class="projects">
+    <h2 class="projects__title">My Projects</h2>
+    <div class="projects__list">
+      <!-- Project Card -->
+      <div class="projects__card">
+        <h3 class="projects__name">My Portfolio </h3>
+        <p class="projects__description">To find more about this porfolio website click Learn More</p>
+        <div class="projects__tech">
+          <strong>Technologies:</strong>
+          <span class="projects__icon"><i class="fab fa-html5"></i></span>
+          <span class="projects__icon"><i class="fab fa-css3-alt"></i></span>
+          <span class="projects__icon"><i class="fab fa-js"></i></span>
+        </div>
+        <div class="projects__actions">
+          <a href="project-page1.html" class="button button--primary" data-project="project1">Learn More</a>
+        </div>
+      </div>
+      <!-- Second project -->
+      <div class="projects__card">
+        <h3 class="projects__name"> Decentralized Healthcare Management App</h3>
+        <p class="projects__description"> Healthcare Management Application made with the hyperledger blockchain</p>
+        <div class="projects__tech">
+          <strong>Technologies:</strong>
+          <span class="projects__icon"><i class="fab fa-react"></i></span>
+          <span class="projects__icon"><i class="fab fa-node"></i></span>
+          <span class="projects__icon"><i class="fab fa-python"></i></span>
+        </div>
+        <div class="projects__actions">
+          <a href="project-page2.html" class="button button--primary" data-project="project2">Learn More</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+
+<!-- Contact Section -->
+<section id="contact" class="contact">
+  <h2 class="contact__title">Contact Me</h2>
+  
+  <!-- Update form action to use Formspree -->
+  <form action="https://formspree.io/f/xvggdwbj" method="POST" class="contact__form">
+    <input type="text" class="contact__input" name="name" placeholder="Your Name" required>
+    <input type="email" class="contact__input" name="email" placeholder="Your Email" required>
+    <textarea class="contact__textarea" name="message" placeholder="Your Message" required></textarea>
+    <button type="submit" class="button button--primary">Send</button>
+  </form>
+
+  <!-- Optional: Social links -->
+  <div class="contact__social-links">
+    <a href="https://www.linkedin.com/in/alexandru-livadariu-b84450205/e" target="_blank" class="contact__social-link"><i class="fab fa-linkedin"></i></a>
+    <a href="https://github.com/Crefi" target="_blank" class="contact__social-link"><i class="fab fa-github"></i></a>
+  </div>
+</section>
+
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p class="footer__text">&copy; 2025 AlexLV. All rights reserved.</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

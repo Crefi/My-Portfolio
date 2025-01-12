@@ -1,0 +1,130 @@
+/* Projects Page Section */
+.project__container {
+  display: flex;
+  gap: 2rem;
+  padding: 2rem;
+  flex-wrap: wrap;
+  justify-content: center; 
+}
+
+.project__description {
+  flex: 1 1 400px; 
+  max-width: 500px;
+  background: var(--bg-color);
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+.project__description p {
+  margin: auto;
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+.project__title {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.project__text {
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.project__tech {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+  justify-content: center; 
+}
+
+.project__tech-icon {
+  margin-right: 0.5rem;
+}
+
+/* Slide Image Section */
+.project__slider {
+  flex: 1 1 400px; 
+  max-width: 800px;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+}
+
+.slider {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: 100%;
+}
+
+.slider__slide {
+  flex: 0 0 100%;
+  box-sizing: border-box;
+}
+
+.slider__slide img {
+  width: 100%;
+  height: auto;
+}
+
+/* Navigation Buttons */
+.slider__prev,
+.slider__next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  padding: 0.5rem;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.slider__prev {
+  left: 10px;
+}
+
+.slider__next {
+  right: 10px;
+}
+
+/* Buttons Section */
+.project__buttons {
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  gap: 1rem; 
+  margin-top: 2rem;
+}
+
+.showcase__wrapper,
+.github__wrapper {
+  text-align: center; 
+}
+
+
+
+
+/* Responsive Fixes for Smaller Screens */
+@media (max-width: 768px) {
+  .project__container {
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+  }
+
+  .project__description {
+    max-width: 100%;
+  }
+
+  .project__buttons {
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 1rem;
+  }
+
+}

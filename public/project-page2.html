@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project2 Page</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  
+</head>
+<body>
+ <!-- Navbar -->
+ <div class="navbar">
+  <div class="navbar__logo">
+    <a href="index.html">AlexLV Portfolio</a>
+  </div>
+  <div class="navbar__links">
+    <a href="index.html" class="navbar__link">Home</a>
+    <a href="#code" class="navbar__link">Code</a>
+    <a href="#contact" class="navbar__link">Comment</a>
+  </div>
+  <div class="navbar__theme-dropdown">
+    <button id="theme-button" class="navbar__theme-button">Switch Theme</button>
+    <ul id="theme-menu" class="navbar__theme-menu">
+      <li class="navbar__theme-option" data-theme="theme-light">Light Theme</li>
+      <li class="navbar__theme-option" data-theme="theme-dark">Dark Theme</li>
+      <li class="navbar__theme-option" data-theme="theme-blue">Blue Theme</li>
+      <li class="navbar__theme-option" data-theme="theme-pink">Pink Theme</li>
+    </ul>
+  </div>
+</div>
+
+  <!-- Main Project Section -->
+  <section class="project">
+    <div class="project__container">
+      <!-- Description Section -->
+      <div class="project__description">
+        <h1 class="project__title">Project Name</h1>
+        <p class="project__text">
+          A detailed description of the project goes here. Explain what the project does, why it was created, and the value it provides. 
+          Include features, challenges you solved, and any highlights.
+        </p>
+        <ul class="project__tech">
+          <li><i class="fab fa-html5 project__tech-icon"></i> HTML</li>
+          <li><i class="fab fa-css3-alt project__tech-icon"></i> CSS</li>
+          <li><i class="fab fa-js project__tech-icon"></i> JavaScript</li>
+        </ul>
+      </div>
+
+      <!-- Image Slider Section -->
+      <div class="project__slider">
+        <div class="slider">
+          <div class="slider__slide"><img src="images/img1-project1.png" alt="Project Slide 1"></div>
+          <div class="slider__slide"><img src="images/img2-project1.png" alt="Project Slide 2"></div>
+          <div class="slider__slide"><img src="images/img3-project1.png" alt="Project Slide 3"></div>
+        </div>
+        <button class="slider__prev"><i class="fas fa-chevron-left"></i></button>
+        <button class="slider__next"><i class="fas fa-chevron-right"></i></button>
+      </div>
+    </div>
+  </section>
+
+<!-- Show Code and GitHub Buttons -->
+<div class="project__buttons">
+  <div class="showcase__wrapper">
+    <button id="show-code-button" class="button button--primary">
+      Show Project Code
+    </button>
+  </div>
+  <div class="github__wrapper">
+    <a href="https://github.com/your-repo-link" target="_blank" class="button button--secondary">
+      View on GitHub
+    </a>
+  </div>
+</div>
+
+
+<!-- Code Showcase (Initially Hidden) -->
+<div id="code-showcase" class="code-showcase hidden">
+  <div class="code-showcase__sidebar">
+    <h3 class="code-showcase__sidebar-title">Files</h3>
+    <ul class="code-showcase__file-list">
+    </ul>
+  </div>
+
+  <div class="code-showcase__editor">
+    <div class="code-showcase__editor-header">
+      <span id="current-file">Select a file...</span>
+    </div>
+    <pre class="code-showcase__code-block">
+      <code id="code-display" class="language-html">
+        <!-- Code dynamically populated -->
+      </code>
+    </pre>
+  </div>
+</div>
+
+<!-- Comments Section -->
+<section id="comments" class="comments">
+  <h2 class="comments__title">Leave a Comment</h2>
+
+  <!-- Comment Form -->
+  <form class="comments__form">
+    <input type="text" id="username" placeholder="Enter your name" required class="comments__input">
+    <textarea class="comments__textarea" placeholder="Write your comment here..." required></textarea>
+    <button type="submit" class="button button--primary">Post Comment</button>
+  </form>
+
+  <!-- List of Comments -->
+  <div class="comments__list"></div>
+</section>
+
+  <script src="js/script.js"></script>
+  <!-- Prism.js library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-css.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-html.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-json.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+/* Global variables ( default blue theme */
+:root {
+  --bg-color: #e8f5fe; 
+  --text-color: #102a43; 
+  --primary-color: #2196f3; 
+  --secondary-color: #e6f1fa; 
+  --nav-bg-color: #1976d2; 
+  --nav-text-color: #ffffff; 
+  --button-hover-color: #1565c0; 
+  --border-color: #b3e5fc; 
+  --highlight-color: #ffffff; 
+  --active-color: #e1f5fe; 
+}
+  

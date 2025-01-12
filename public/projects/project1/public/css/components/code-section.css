@@ -1,0 +1,262 @@
+/* Code colors matching VS Code tokens for Prism*/
+.token.comment, .token.block-comment, .token.prolog, .token.doctype, .token.cdata {
+  color: #6a9955; /* Green for comments */
+}
+
+.token.punctuation {
+  color: #d4d4d4; /* Default text */
+}
+
+.token.property, .token.tag, .token.boolean, .token.number, .token.constant, .token.symbol, .token.deleted {
+  color: #569cd6; /* Blue for tags and constants */
+}
+
+.token.selector, .token.attr-name, .token.string, .token.char, .token.builtin, .token.inserted {
+  color: #ce9178; /* Orange for strings */
+}
+
+.token.operator, .token.entity, .token.url, .token.variable {
+  color: #d4d4d4; /* Default color */
+}
+
+.token.keyword {
+  color: #c586c0; /* Purple for keywords */
+}
+
+.token.function {
+  color: #dcdcaa; /* Yellow for functions */
+}
+
+.token.regex, .token.important {
+  color: #d16969; /* Red for errors */
+}
+ 
+/* Code Showcase */
+.code-showcase {
+  display: flex;
+  height: 100vh; /* Full screen height */
+  border: 1px solid var(--border-color);
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-family: 'Courier New', monospace;
+  box-sizing: border-box;
+  padding: 10px; 
+  gap: 20px; 
+}
+
+/* Sidebar Styling */
+.code-showcase__sidebar {
+  width: var(--sidebar-width);
+  max-width: 300px; 
+  background-color: var(--secondary-color);
+  overflow-y: auto;
+  border-right: 1px solid var(--border-color);
+  padding-top: 10px;
+  box-shadow: 3px 0 6px rgba(0, 0, 0, 0.2);
+  transition: width 0.3s ease;
+  padding-right: 10px;
+}
+
+.code-showcase__sidebar-title {
+  padding: 10px;
+  font-size: clamp(1rem, 2vw, 1.2em); 
+  color: #9cdcfe; 
+  margin: 0 0 15px;
+}
+
+.code-showcase__file-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.code-showcase__file-item {
+  padding: 10px 15px;
+  cursor: pointer;
+  color: var(--text-color);
+  font-size: clamp(0.85em, 2vw, 1em); 
+  border-bottom: 1px solid var(--border-color);
+  transition: background-color 0.2s ease-in-out;
+}
+
+.code-showcase__file-item:hover,
+.code-showcase__file-item.active {
+  background-color: var(--secondary-color);
+}
+
+.code-showcase__file-item.folder {
+  font-weight: bold;
+  color: #9cdcfe;
+}
+
+.code-showcase__file-item.folder:hover {
+  background-color: var(--highlight-color);
+}
+
+
+.code-showcase__file-item.active {
+  background-color: var(--active-color);
+  color: #ed0606;
+}
+
+
+.code-showcase__file-item::before {
+  content: "📄";
+  margin-right: 8px;
+}
+
+.code-showcase__file-item.folder::before {
+  content: "📁";
+  margin-right: 8px;
+}
+
+/* Editor Styling */
+.code-showcase__editor {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  padding-left: 20px; /* Add padding to the left */
+}
+
+.code-showcase__editor-header {
+  padding: 10px;
+  background-color: #2d2d2d;
+  color: #9cdcfe;
+  font-size: clamp(0.8em, 2vw, 0.9em); /* Responsive header font size */
+  border-bottom: 1px solid var(--border-color);
+}
+
+.code-showcase__code-block {
+  flex-grow: 1;
+  overflow: auto;
+  padding: 15px;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-size: clamp(0.9em, 2vw, 1em); /* Responsive font size */
+  white-space: pre-wrap;
+  border: none;
+  border-radius: 4px;
+  box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.3);
+  font-family: 'Courier New', monospace;
+}
+
+/* Scrollbar Styling */
+.code-showcase__code-block::-webkit-scrollbar {
+  width: 8px;
+}
+
+.code-showcase__code-block::-webkit-scrollbar-thumb {
+  background-color: #555;
+  border-radius: 4px;
+}
+
+.code-showcase__code-block::-webkit-scrollbar-thumb:hover {
+  background-color: #777;
+}
+
+/* Folder list */
+.code-showcase__folder-list {
+  padding-left: 20px;
+}
+
+.code-showcase__folder-list .code-showcase__file-item {
+  padding-left: 20px;
+  font-size: 0.9em;
+  transition: padding-left 0.2s ease-in-out;
+}
+
+.code-showcase__file-item.folder:hover > .code-showcase__folder-list {
+  padding-left: 30px;
+}
+
+/* Sidebar Toggle Animation */
+.code-showcase__sidebar.closed {
+  width: 60px;
+}
+
+.code-showcase__sidebar.closed .code-showcase__file-item {
+  padding-left: 5px;
+}
+
+.code-showcase__sidebar.closed .code-showcase__sidebar-title {
+  display: none;
+}
+
+
+/* Hidden state */
+.hidden {
+  display: none;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
+  transition: all 0.3s ease;
+}
+
+/* Visible state */
+.visible {
+  display: flex;
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* Show Code Button Styling */
+#show-code-button {
+  padding: 10px 20px;
+  background-color: var(--primary-color);
+  color: white;
+  font-size: clamp(0.9em, 2vw, 1em); /* Responsive button font size */
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin: 20px;
+  transition: background-color 0.3s;
+}
+
+#show-code-button:hover {
+  background-color: #005fa3;
+}
+
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  /* Make the sidebar wider on mobile */
+  .code-showcase__sidebar {
+    width: 300px; 
+    padding-top: 10px; 
+    padding-right: 10px;
+  }
+
+  .code-showcase__sidebar.closed {
+    width: 0; 
+  }
+
+  .code-showcase__file-item {
+    font-size: 1em; 
+    padding: 10px 12px; 
+  }
+
+  .code-showcase__file-list {
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Adjust the code block for smaller screens */
+  .code-showcase__code-block {
+    padding: 12px;
+    font-size: 0.95em; /* Slightly larger font for readability */
+    max-height: 75vh; /* Limit height to prevent overflow */
+  }
+
+  /* Editor header adjustments */
+  .code-showcase__editor-header {
+    font-size: 0.9em;
+  }
+
+  /* Button adjustments */
+  #show-code-button {
+    font-size: 1em;
+    padding: 10px 18px; /* Slightly larger for easier clicking */
+  }
+}

@@ -1,0 +1,69 @@
+@import './base/reset.css';
+@import './base/variables.css';
+@import './base/typography.css';
+@import './components/about.css';
+@import './components/contact.css';
+@import './components/footer.css';
+@import './components/hero.css';
+@import './components/navbar.css';
+@import './components/projects.css';
+@import './components/skills.css';
+@import './components/code-section.css';
+@import './components/project-section.css';
+@import './components/comments.css';
+@import './themes/themes.css';
+
+
+
+/* General */
+body {
+  font-family: var(--primary-font-family), sans-serif;
+  font-weight: var(--primary-font-weight);
+  font-style: var(--primary-font-style);
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+h1, h2, h3 {
+  color: var(--primary-color);
+  margin: 0;
+  padding: 0;
+}
+
+/* Buttons (Generic Styles for Reuse) */
+.button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  text-align: center;
+  text-decoration: none;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.button--primary {
+  background-color: var(--primary-color);
+  color: var(--bg-color);
+}
+
+.button--primary:hover {
+  background-color: var(--button-hover-color);
+}
+
+.button--secondary {
+  background-color: transparent;
+  color: var(--primary-color);
+  border: 2px solid var(--primary-color);
+}
+
+.button--secondary:hover {
+  background-color: var(--primary-color);
+  color: var(--bg-color);
+}
+
+
+
+
